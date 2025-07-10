@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qushy FX - Market Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-screen" id="login-screen">
+    <h2>Login to Qushy FX</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="login-message"></p>
+  </div>
+
+  <div class="main-screen" id="main-screen" style="display:none;">
+    <h1>📊 Qushy FX Digit Analyzer</h1>
+
+    <div>
+      <label>API Token:</label>
+      <input type="text" id="api-token" placeholder="Paste Deriv API Token">
+      <button onclick="connectDeriv()">Connect</button>
+    </div>
+
+    <div class="controls">
+      <button onclick="startBot()">▶️ Start Bot</button>
+      <button onclick="stopBot()">⏹ Stop Bot</button>
+      <input type="number" id="run-count" placeholder="Runs">
+      <input type="number" id="stop-loss" placeholder="Stop Loss">
+      <input type="number" id="take-profit" placeholder="Take Profit">
+    </div>
+
+    <div class="signals">
+      <h3>📢 Signals</h3>
+      <div id="signals-output"></div>
+    </div>
+
+    <div class="stats">
+      <h3>📈 Digit Stats</h3>
+      <div id="digit-stats"></div>
+    </div>
+
+    <div class="win-loss">
+      <p>✅ Wins: <span id="wins">0</span> ❌ Losses: <span id="losses">0</span></p>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+        </html>
